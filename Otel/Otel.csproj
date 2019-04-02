@@ -1,0 +1,237 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="15.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <Import Project="$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props" Condition="Exists('$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props')" />
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProjectGuid>{B0AF5B1A-F238-4F69-B0AC-84A53A4C7CCC}</ProjectGuid>
+    <OutputType>WinExe</OutputType>
+    <RootNamespace>Otel</RootNamespace>
+    <AssemblyName>Otel</AssemblyName>
+    <TargetFrameworkVersion>v4.5.2</TargetFrameworkVersion>
+    <FileAlignment>512</FileAlignment>
+    <AutoGenerateBindingRedirects>true</AutoGenerateBindingRedirects>
+    <Deterministic>true</Deterministic>
+    <TargetFrameworkProfile />
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <PlatformTarget>AnyCPU</PlatformTarget>
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\Debug\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <PlatformTarget>AnyCPU</PlatformTarget>
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\Release\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="EntityFramework, Version=6.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089, processorArchitecture=MSIL">
+      <HintPath>..\packages\EntityFramework.6.2.0\lib\net45\EntityFramework.dll</HintPath>
+    </Reference>
+    <Reference Include="EntityFramework.SqlServer, Version=6.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089, processorArchitecture=MSIL">
+      <HintPath>..\packages\EntityFramework.6.2.0\lib\net45\EntityFramework.SqlServer.dll</HintPath>
+    </Reference>
+    <Reference Include="System" />
+    <Reference Include="System.ComponentModel.DataAnnotations" />
+    <Reference Include="System.Core" />
+    <Reference Include="System.Runtime.Serialization" />
+    <Reference Include="System.Security" />
+    <Reference Include="System.Xml.Linq" />
+    <Reference Include="System.Data.DataSetExtensions" />
+    <Reference Include="Microsoft.CSharp" />
+    <Reference Include="System.Data" />
+    <Reference Include="System.Deployment" />
+    <Reference Include="System.Drawing" />
+    <Reference Include="System.Net.Http" />
+    <Reference Include="System.Windows.Forms" />
+    <Reference Include="System.Xml" />
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="Class\CrudFacede\IOtelRepository.cs" />
+    <Compile Include="Class\CrudFacede\OtelCrud.cs" />
+    <Compile Include="Class\Factory\DbFactory.cs" />
+    <Compile Include="Class\Il.cs" />
+    <Compile Include="Class\Ilce.cs" />
+    <Compile Include="Class\Mahalle.cs" />
+    <Compile Include="Class\Musteri.cs" />
+    <Compile Include="Class\Oda.cs" />
+    <Compile Include="Class\Otel.cs" />
+    <Compile Include="Class\OtelOzelligi.cs" />
+    <Compile Include="Class\OtelResimleri.cs" />
+    <Compile Include="Class\Ozellik.cs" />
+    <Compile Include="Class\Rezervasyon.cs" />
+    <Compile Include="Class\Yorum.cs" />
+    <Compile Include="Class\Yıldız.cs" />
+    <Compile Include="DbObject\DbObject.cs" />
+    <Compile Include="DbObject\MaxlenghtAttribute.cs" />
+    <Compile Include="Formlar\Anasayfa.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Formlar\Anasayfa.Designer.cs">
+      <DependentUpon>Anasayfa.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Formlar\Giris.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Formlar\Giris.Designer.cs">
+      <DependentUpon>Giris.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Formlar\KayıtOl.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Formlar\KayıtOl.Designer.cs">
+      <DependentUpon>KayıtOl.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Formlar\OdemeIslemi.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Formlar\OdemeIslemi.Designer.cs">
+      <DependentUpon>OdemeIslemi.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Formlar\OtelAra.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Formlar\OtelAra.Designer.cs">
+      <DependentUpon>OtelAra.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Formlar\OtelRezervasyon.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Formlar\OtelRezervasyon.Designer.cs">
+      <DependentUpon>OtelRezervasyon.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Formlar\RezervasyonTamam.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Formlar\RezervasyonTamam.Designer.cs">
+      <DependentUpon>RezervasyonTamam.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Formlar\SifremiUnuttum.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Formlar\SifremiUnuttum.Designer.cs">
+      <DependentUpon>SifremiUnuttum.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Formlar\Yorumlar.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Formlar\Yorumlar.Designer.cs">
+      <DependentUpon>Yorumlar.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Migrations\201902071706076_veritabanıolusturuldu.cs" />
+    <Compile Include="Migrations\201902071706076_veritabanıolusturuldu.Designer.cs">
+      <DependentUpon>201902071706076_veritabanıolusturuldu.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Migrations\201902081233043_oteleklendi.cs" />
+    <Compile Include="Migrations\201902081233043_oteleklendi.Designer.cs">
+      <DependentUpon>201902081233043_oteleklendi.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Migrations\201902081311584_Tabloladadegisiklikyapildi.cs" />
+    <Compile Include="Migrations\201902081311584_Tabloladadegisiklikyapildi.Designer.cs">
+      <DependentUpon>201902081311584_Tabloladadegisiklikyapildi.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Migrations\201902081332131_Tabloladadegisiklikyapildi2.cs" />
+    <Compile Include="Migrations\201902081332131_Tabloladadegisiklikyapildi2.Designer.cs">
+      <DependentUpon>201902081332131_Tabloladadegisiklikyapildi2.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Migrations\201902081341180_Tabloladadegisiklikyapildi3.cs" />
+    <Compile Include="Migrations\201902081341180_Tabloladadegisiklikyapildi3.Designer.cs">
+      <DependentUpon>201902081341180_Tabloladadegisiklikyapildi3.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Migrations\201902081429278_Tabloladadegisiklikyapildi4.cs" />
+    <Compile Include="Migrations\201902081429278_Tabloladadegisiklikyapildi4.Designer.cs">
+      <DependentUpon>201902081429278_Tabloladadegisiklikyapildi4.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Migrations\201902081431372_Tabloladadegisiklikyapildi5.cs" />
+    <Compile Include="Migrations\201902081431372_Tabloladadegisiklikyapildi5.Designer.cs">
+      <DependentUpon>201902081431372_Tabloladadegisiklikyapildi5.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Migrations\Configuration.cs" />
+    <Compile Include="OtelContext.cs" />
+    <Compile Include="Program.cs" />
+    <Compile Include="Properties\AssemblyInfo.cs" />
+    <EmbeddedResource Include="Formlar\Anasayfa.resx">
+      <DependentUpon>Anasayfa.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Formlar\Giris.resx">
+      <DependentUpon>Giris.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Formlar\KayıtOl.resx">
+      <DependentUpon>KayıtOl.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Formlar\OdemeIslemi.resx">
+      <DependentUpon>OdemeIslemi.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Formlar\OtelAra.resx">
+      <DependentUpon>OtelAra.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Formlar\OtelRezervasyon.resx">
+      <DependentUpon>OtelRezervasyon.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Formlar\RezervasyonTamam.resx">
+      <DependentUpon>RezervasyonTamam.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Formlar\SifremiUnuttum.resx">
+      <DependentUpon>SifremiUnuttum.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Formlar\Yorumlar.resx">
+      <DependentUpon>Yorumlar.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\201902071706076_veritabanıolusturuldu.resx">
+      <DependentUpon>201902071706076_veritabanıolusturuldu.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\201902081233043_oteleklendi.resx">
+      <DependentUpon>201902081233043_oteleklendi.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\201902081311584_Tabloladadegisiklikyapildi.resx">
+      <DependentUpon>201902081311584_Tabloladadegisiklikyapildi.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\201902081332131_Tabloladadegisiklikyapildi2.resx">
+      <DependentUpon>201902081332131_Tabloladadegisiklikyapildi2.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\201902081341180_Tabloladadegisiklikyapildi3.resx">
+      <DependentUpon>201902081341180_Tabloladadegisiklikyapildi3.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\201902081429278_Tabloladadegisiklikyapildi4.resx">
+      <DependentUpon>201902081429278_Tabloladadegisiklikyapildi4.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\201902081431372_Tabloladadegisiklikyapildi5.resx">
+      <DependentUpon>201902081431372_Tabloladadegisiklikyapildi5.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Properties\Resources.resx">
+      <Generator>ResXFileCodeGenerator</Generator>
+      <LastGenOutput>Resources.Designer.cs</LastGenOutput>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <Compile Include="Properties\Resources.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DependentUpon>Resources.resx</DependentUpon>
+      <DesignTime>True</DesignTime>
+    </Compile>
+    <None Include="packages.config" />
+    <None Include="Properties\Settings.settings">
+      <Generator>SettingsSingleFileGenerator</Generator>
+      <LastGenOutput>Settings.Designer.cs</LastGenOutput>
+    </None>
+    <Compile Include="Properties\Settings.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DependentUpon>Settings.settings</DependentUpon>
+      <DesignTimeSharedInput>True</DesignTimeSharedInput>
+    </Compile>
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="App.config">
+      <SubType>Designer</SubType>
+    </None>
+  </ItemGroup>
+  <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
+</Project>
